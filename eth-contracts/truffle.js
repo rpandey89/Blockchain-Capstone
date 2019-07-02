@@ -1,7 +1,8 @@
 var HDWalletProvider = require('truffle-hdwallet-provider')
 var MNEMONIC =
   'doll source together survey box meat assist green sand conduct ostrich ginger'
-var INFURA_NODE = ''
+var INFURA_NODE =
+  'https://rinkeby.infura.io/v3/8db2f9dc63264173982c299d9ee46df6'
 module.exports = {
   networks: {
     development: {
