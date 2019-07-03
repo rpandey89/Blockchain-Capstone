@@ -705,14 +705,48 @@ path/to/zokrates export-verifier
   ]
 ```
 
+### Running tests
+
+1. Open a terminal window and execute the following command:
+```
+ganache-cli --mnemonic 'doll source together survey box meat assist green sand conduct ostrich ginger'
+```
+2. Go to eth-contracts folder of this project on your local machine
+3. Install npm packages
+```
+npm install
+```
+4. Build the contracts and deploy on the development network
+```
+truffle migrate --network development
+```
+5. Run the tests
+```
+truffle test
+```
+6. All 11 tests should pass
+
+### Minting GREALY tokens
+
+1. Go to [MyEtherWallet](https://www.myetherwallet.com/interface/interact-with-contract)
+2. Click on Metamask ![MEW Dashboard](images/MyEtherWalletDashboard.png)
+3. Access Metamask wallet with the same account address using which the SolnSquareVerifier contract was deployed ![Metamask Wallet](images/MetamaskConnect.png)
+4. Copy paste the SolnSquareVerifier ABI json and address 0xeB86157A1bfdc5D7E8169F289cEA96F9CfAE421D in the respective fields ![PasteABIAddress](images/PasteABIAddress.png)
+5. Click Continue
+6. Select mint token ![MintToken](images/MintTokenSelect.png)
+7. Enter the contract owner address, tokenId, Ether value to mint the token ![MintToken](images/MintToken.png)
+
 ### Rinkeby Transactions
-Token Transactions on rinkeby can be found here
+Token Transactions done above can be found on rinkeby here
 https://rinkeby.etherscan.io/token/0xeb86157a1bfdc5d7e8169f289cea96f9cfae421d
 
 ### Blockchain Transaction Details
 ```
 SolnSquareVerifier address
 0xeB86157A1bfdc5D7E8169F289cEA96F9CfAE421D
+
+SquareVerifier address
+0x5e692B70a57F3193fb2Ce994e303476fB95A193a
 
 transaction 1 hash token 11 0x66343038e26e919270c8f29dab9b8297813c675e6567dbc11c2f652485507c58
 
@@ -738,6 +772,21 @@ transaction hash sell token 15
 0xd226a1016b37fa676dd8a5b3be25be790f4fd07fe94ab8a03877d8573ed6883e
 ApproveForAll 0x65c2708a91b7411f01350cc12e479e312d619d1e2fb7ef00ffd8143371641dea
 Approve 0x919df3bed9500c07e3eedacceabab0d760a8d4304ebca97d215a2cf55943f1c0
+
+purchase transaction hash token 15
+0x9534decdd77b0c9fd1de0f2089f3893c55420271c80bdc16d06b127176e67db5
+
+purchase transaction hash token 29
+0x94aa3f3f540157cd2dc2679976b154a91bb0f6de72237cd5bb9614004679cfe7
+
+purchase transaction hash token 23
+0xcb39eb6198c5658e6a4c3e3969223ac286006aef85ac12d42547247532ec77ef
+
+purchase transaction hash token 21
+0xd4205ddb3a0492546e6e79855b338f5fbc85ccdf8ecef42e7e231ca601089526
+
+purchase transaction hash token 10
+0x37f09ebcb01205fe18de2555734a9b230db2d54920b3b0730ea2644a32f93c6b
 ```
 
 ### Marketplace
